@@ -1,17 +1,33 @@
-# PyCharm
-.idea/
+# Environment variables - NEVER commit credentials!
+.env
 
-# Virtual environments
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
 venv/
 env/
+ENV/
+.venv
 
-# Python cache
-__pycache__/
-*.pyc
-
-# Environment variables
-.env
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # OS files
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
