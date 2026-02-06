@@ -1,33 +1,73 @@
-# Environment variables - NEVER commit credentials!
-.env
+# =========================
+# General
+# =========================
+.DS_Store
+Thumbs.db
 
-# Python cache files
+# =========================
+# Node / React / Vite
+# =========================
+node_modules/
+dist/
+build/
+.vite/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+
+# =========================
+# Python
+# =========================
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-
-# Virtual environment
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.venv/
 venv/
-env/
 ENV/
-.venv
+env/
+pip-wheel-metadata/
 
-# IDE settings
+# =========================
+# Jupyter / ML
+# =========================
+.ipynb_checkpoints/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.onnx
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# IDE / Editor
+# =========================
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Distribution / packaging
-dist/
-build/
-*.egg-info/
+# =========================
+# OS / Misc
+# =========================
+coverage/
+tmp/
+temp/

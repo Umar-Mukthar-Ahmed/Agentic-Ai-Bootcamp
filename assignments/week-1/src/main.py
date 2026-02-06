@@ -1,7 +1,7 @@
 """Sample Python script demonstrating a simple greeting function."""
 
 
-def print_hi() -> None:
+def print_hello() -> None:
     """Print a greeting message."""
 
 
@@ -10,7 +10,7 @@ def print_hi() -> None:
 
 def main() -> None:
     """Main entry point of the script."""
-    print_hi()
+    print_hello()
 
 
 if __name__ == "__main__":
