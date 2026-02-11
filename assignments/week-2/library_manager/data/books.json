@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Fundamentals of Computer Programming with C#",
+    "author": "Svetlin Nakov",
+    "genre": "Unknown",
+    "year": 2013,
+    "isbn": "9789544007737",
+    "rating": 4.6,
+    "status": "reading",
+    "added_date": "2025-12-29",
+    "notes": ""
+  }
+]
