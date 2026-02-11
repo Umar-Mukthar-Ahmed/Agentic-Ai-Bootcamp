@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "feedback": "The delivery was late and the packaging was damaged. Customer support was slow but polite."
+  },
+  {
+    "id": 2,
+    "feedback": "Excellent product quality! Fast shipping and great customer service. Highly recommended!"
+  },
+  {
+    "id": 3,
+    "feedback": "The product is okay, but the website is confusing and hard to navigate. Checkout process needs improvement."
+  },
+  {
+    "id": 4,
+    "feedback": "Terrible experience. The item arrived broken and customer support was unhelpful. Will not buy again."
+  },
+  {
+    "id": 5,
+    "feedback": "Good value for money. Delivery was on time and the product matches the description perfectly."
+  },
+  {
+    "id": 6,
+    "feedback": "The app keeps crashing during checkout. Very frustrating experience. Fix your technical issues!"
+  },
+  {
+    "id": 7,
+    "feedback": "Loved the personalized packaging! The product exceeded my expectations. Five stars!"
+  },
+  {
+    "id": 8,
+    "feedback": "Average product. Nothing special. Delivery took longer than expected but within the promised window."
+  },
+  {
+    "id": 9,
+    "feedback": "Customer support team went above and beyond to resolve my issue. Very impressed with the service!"
+  },
+  {
+    "id": 10,
+    "feedback": "Pricing is too high compared to competitors. Quality is good but not worth the premium price."
+  },
+  {
+    "id": 11,
+    "feedback": "Easy returns process and quick refund. Appreciate the hassle-free policy!"
+  },
+  {
+    "id": 12,
+    "feedback": "Product arrived with missing parts. Had to wait 2 weeks for replacement. Poor inventory management."
+  },
+  {
+    "id": 13,
+    "feedback": "The mobile app interface is intuitive and user-friendly. Great shopping experience overall."
+  },
+  {
+    "id": 14,
+    "feedback": "Received promotional emails too frequently. Unsubscribed after getting 5 emails in one day."
+  },
+  {
+    "id": 15,
+    "feedback": "Loyalty program is confusing. Points system needs better explanation. Otherwise satisfied with purchases."
+  },
+  {
+    "id": 16,
+    "feedback": "International shipping is expensive and slow. Consider partnering with better logistics providers."
+  },
+  {
+    "id": 17,
+    "feedback": "Eco-friendly packaging is a big plus! Love that the company cares about sustainability."
+  },
+  {
+    "id": 18,
+    "feedback": "Live chat support is helpful but wait times are too long during peak hours."
+  },
+  {
+    "id": 19,
+    "feedback": "Product photos on website don't match actual product. Color was different than expected."
+  },
+  {
+    "id": 20,
+    "feedback": "Best online shopping experience I've had! Everything was perfect from browsing to delivery."
+  }
+]
