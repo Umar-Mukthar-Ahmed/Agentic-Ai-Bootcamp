@@ -77,6 +77,17 @@ const projects = [
         deployUrl: "#",
         githubUrl: "#",
     },
+    {
+    id: 8,
+    week: 7,
+    name: "Image Analyzer App",
+    description: "AI-powered image analysis tool using Azure Computer Vision. Features OCR text extraction, object detection, image descriptions, probabilistic decision-making, and uncertainty handling with dual CLI and Streamlit web interfaces.",
+    tags: ["AI", "Computer Vision", "OCR", "Azure"],
+    stack: ["Python", "Azure AI", "Streamlit", "Plotly"],
+    status: "live",
+    deployUrl: "https://image-analyzer-app-lu6ftn22jvzn5jpoeqqiha.streamlit.app/",
+    githubUrl: "https://github.com/Umar-Mukthar-Ahmed/image-analyzer-app/",
+}
 ];
 
 /* ─── STATUS CONFIG ─── */
