@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "title": "RRR",
+    "genre": "Action",
+    "rating": 8.8,
+    "year": 2022,
+    "watched": true
+  },
+  {
+    "title": "3 Idiots",
+    "genre": "Comedy",
+    "rating": 8.4,
+    "year": 2009,
+    "watched": true
+  },
+  {
+    "title": "Baahubali 2",
+    "genre": "Action",
+    "rating": 8.2,
+    "year": 2017,
+    "watched": true
+  },
+  {
+    "title": "Dangal",
+    "genre": "Drama",
+    "rating": 8.3,
+    "year": 2016,
+    "watched": false
+  },
+  {
+    "title": "Tumbbad",
+    "genre": "Horror",
+    "rating": 8.2,
+    "year": 2018,
+    "watched": true
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "rating": 9.3,
+    "year": 1994,
+    "watched": true
+  },
+  {
+    "title": "Inception",
+    "genre": "Sci-Fi",
+    "rating": 8.8,
+    "year": 2010,
+    "watched": false
+  },
+  {
+    "title": "Parasite",
+    "genre": "Thriller",
+    "rating": 8.6,
+    "year": 2019,
+    "watched": true
+  },
+  {
+    "title": "Spirited Away",
+    "genre": "Animation",
+    "rating": 8.6,
+    "year": 2001,
+    "watched": false
+  },
+  {
+    "title": "KGF Chapter 2",
+    "genre": "Action",
+    "rating": 8.4,
+    "year": 2022,
+    "watched": true
+  }
+]
