@@ -49,6 +49,13 @@ agent = st.session_state.agent
 # Ensure agent always uses current session state movies
 agent.movies = st.session_state.movies
 
+
+# Helper function to sync movies back to session state
+def sync_movies():
+    """Sync agent's movies back to session state"""
+    st.session_state.movies = agent.movies
+
+
 # Custom CSS
 st.markdown("""
     <style>
@@ -119,11 +126,13 @@ def display_movie_card(movie, key_prefix=""):
         if not movie['watched']:
             if st.button("Mark Watched", key=f"{key_prefix}_watch_{movie['title']}"):
                 agent.mark_as_watched(movie['title'])
+                sync_movies()
                 st.rerun()
 
     with col2:
         if st.button("Delete", key=f"{key_prefix}_del_{movie['title']}"):
             agent.delete_movie(movie['title'])
+            sync_movies()
             st.success(f"Deleted '{movie['title']}'")
             st.rerun()
 
@@ -251,6 +260,7 @@ elif page == "➕ Add Movie":
                     if st.button("Add this movie", type="primary"):
                         result = agent.add_movie_from_api(search_title)
                         if result:
+                            sync_movies()
                             st.success(f"✓ '{movie_data['title']}' added successfully!")
                             st.balloons()
                         else:
@@ -281,6 +291,7 @@ elif page == "➕ Add Movie":
             if submitted:
                 if title and genre:
                     agent.add_movie(title, genre, rating, year, watched)
+                    sync_movies()
                     st.success(f"✓ '{title}' added successfully!")
                     st.balloons()
                 else:

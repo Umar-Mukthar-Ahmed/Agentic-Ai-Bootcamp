@@ -55,6 +55,9 @@ class MovieAgent:
         }
         self.movies.append(movie)
         self.save_movies()
+        # Force update if using session state
+        if self.use_session_state:
+            self.movies = self.movies.copy()  # Trigger reference change
         return movie
 
     def list_movies(self) -> List[Dict]:
@@ -88,6 +91,9 @@ class MovieAgent:
             if movie["title"].lower() == title.lower():
                 movie["watched"] = True
                 self.save_movies()
+                # Force update if using session state
+                if self.use_session_state:
+                    self.movies = self.movies.copy()  # Trigger reference change
                 return True
         return False
 
@@ -100,6 +106,9 @@ class MovieAgent:
         ]
         if len(self.movies) < original_length:
             self.save_movies()
+            # Force update if using session state
+            if self.use_session_state:
+                self.movies = self.movies.copy()  # Trigger reference change
             return True
         return False
 
@@ -194,6 +203,9 @@ class MovieAgent:
             }
             self.movies.append(clean_data)
             self.save_movies()
+            # Force update if using session state
+            if self.use_session_state:
+                self.movies = self.movies.copy()  # Trigger reference change
             return movie_data
         return None
 
