@@ -10,11 +10,19 @@ class MovieAgent:
     GHIBLI_API_URL = "https://ghibliapi.vercel.app/films"
     OMDB_API_URL = "http://www.omdbapi.com/"
 
-    def __init__(self, data_path: str = "data/movies.json", omdb_api_key: Optional[str] = None):
+    def __init__(self, data_path: str = "data/movies.json", omdb_api_key: Optional[str] = None,
+                 use_session_state: bool = False, session_movies: Optional[List[Dict]] = None):
         self.data_path = Path(data_path)
         self.omdb_api_key = omdb_api_key
-        self._ensure_data_directory()
-        self.movies = self.load_movies()
+        self.use_session_state = use_session_state
+
+        if use_session_state and session_movies is not None:
+            # Use provided session state movies
+            self.movies = session_movies
+        else:
+            # Use file-based storage (for CLI)
+            self._ensure_data_directory()
+            self.movies = self.load_movies()
 
     def _ensure_data_directory(self):
         """Create data directory if it doesn't exist"""
@@ -31,9 +39,10 @@ class MovieAgent:
             return []
 
     def save_movies(self):
-        """Save movies to JSON file"""
-        with open(self.data_path, "w") as file:
-            json.dump(self.movies, file, indent=2)
+        """Save movies to JSON file (only if not using session state)"""
+        if not self.use_session_state:
+            with open(self.data_path, "w") as file:
+                json.dump(self.movies, file, indent=2)
 
     def add_movie(self, title: str, genre: str, rating: float, year: int, watched: bool = False) -> Dict:
         """Add a new movie to the collection"""

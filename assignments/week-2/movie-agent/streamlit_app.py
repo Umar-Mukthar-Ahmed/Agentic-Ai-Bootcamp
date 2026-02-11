@@ -11,11 +11,43 @@ st.set_page_config(
 )
 
 # Initialize session state
+if 'movies' not in st.session_state:
+    # Initialize with sample data or empty list
+    st.session_state.movies = [
+        {
+            "title": "RRR",
+            "genre": "Action",
+            "rating": 8.8,
+            "year": 2022,
+            "watched": True
+        },
+        {
+            "title": "3 Idiots",
+            "genre": "Comedy",
+            "rating": 8.4,
+            "year": 2009,
+            "watched": True
+        },
+        {
+            "title": "Spirited Away",
+            "genre": "Animation",
+            "rating": 8.6,
+            "year": 2001,
+            "watched": False
+        }
+    ]
+
 if 'agent' not in st.session_state:
     omdb_key = os.getenv("OMDB_API_KEY")
-    st.session_state.agent = MovieAgent(omdb_api_key=omdb_key)
+    st.session_state.agent = MovieAgent(
+        omdb_api_key=omdb_key,
+        use_session_state=True,
+        session_movies=st.session_state.movies
+    )
 
 agent = st.session_state.agent
+# Ensure agent always uses current session state movies
+agent.movies = st.session_state.movies
 
 # Custom CSS
 st.markdown("""
