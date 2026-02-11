@@ -231,44 +231,60 @@ elif page == "➕ Add Movie":
     with tab1:
         st.subheader("Search from API")
 
+        # Initialize search result in session state
+        if 'search_result' not in st.session_state:
+            st.session_state.search_result = None
+
         search_title = st.text_input("Enter movie title to search")
 
         if st.button("Search", type="primary"):
             if search_title:
                 with st.spinner("Searching..."):
                     movie_data = agent.fetch_movie_from_api(search_title)
-
-                if movie_data:
-                    st.success("Movie found!")
-
-                    col1, col2 = st.columns(2)
-
-                    with col1:
-                        st.write(f"**Title:** {movie_data['title']}")
-                        st.write(f"**Genre:** {movie_data['genre']}")
-                        st.write(f"**Rating:** {movie_data['rating']}/10")
-                        st.write(f"**Year:** {movie_data['year']}")
-
-                    with col2:
-                        st.write(f"**Source:** {movie_data.get('source', 'API')}")
-                        if movie_data.get('director'):
-                            st.write(f"**Director:** {movie_data['director']}")
-
-                    if movie_data.get('description'):
-                        st.write(f"**Description:** {movie_data['description']}")
-
-                    if st.button("Add this movie", type="primary"):
-                        result = agent.add_movie_from_api(search_title)
-                        if result:
-                            sync_movies()
-                            st.success(f"✓ '{movie_data['title']}' added successfully!")
-                            st.balloons()
-                        else:
-                            st.error("Failed to add movie. It might already exist.")
-                else:
-                    st.error("Movie not found in API. Try manual entry or a different title.")
+                    st.session_state.search_result = movie_data
             else:
                 st.warning("Please enter a movie title.")
+
+        # Display search result if available
+        if st.session_state.search_result:
+            movie_data = st.session_state.search_result
+            st.success("Movie found!")
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+                st.write(f"**Title:** {movie_data['title']}")
+                st.write(f"**Genre:** {movie_data['genre']}")
+                st.write(f"**Rating:** {movie_data['rating']}/10")
+                st.write(f"**Year:** {movie_data['year']}")
+
+            with col2:
+                st.write(f"**Source:** {movie_data.get('source', 'API')}")
+                if movie_data.get('director'):
+                    st.write(f"**Director:** {movie_data['director']}")
+
+            if movie_data.get('description'):
+                st.write(f"**Description:** {movie_data['description']}")
+
+            col1, col2 = st.columns([1, 3])
+            with col1:
+                if st.button("Add this movie", type="primary", key="add_api_movie"):
+                    result = agent.add_movie_from_api(movie_data['title'])
+                    if result:
+                        sync_movies()
+                        st.success(f"✓ '{movie_data['title']}' added successfully!")
+                        st.balloons()
+                        # Clear search result after adding
+                        st.session_state.search_result = None
+                        st.rerun()
+                    else:
+                        st.error("Failed to add movie. It might already exist.")
+            with col2:
+                if st.button("Clear search", key="clear_search"):
+                    st.session_state.search_result = None
+                    st.rerun()
+        elif st.session_state.search_result is not None and not st.session_state.search_result:
+            st.error("Movie not found in API. Try manual entry or a different title.")
 
     with tab2:
         st.subheader("Manual Entry")
