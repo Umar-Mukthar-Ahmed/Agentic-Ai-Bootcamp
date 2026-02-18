@@ -9,85 +9,107 @@ const projects = [
         stack: ["Python"],
         status: "completed",
         deployUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/Umar-Mukthar-Ahmed/Agentic-Ai-Bootcamp/tree/main/assignments/week-1",
     },
     {
         id: 2,
-        week: 1,
-        name: "Tech Article Summarizer",
-        description: "Scrapes and summarizes technical blog posts and research papers. Extracts key takeaways tailored for developers.",
-        tags: ["AI", "Web Scraping", "NLP"],
-        stack: ["Python", "BeautifulSoup", "LangChain", "Streamlit"],
-        status: "live",
-        deployUrl: "https://example.com",
-        githubUrl: "#",
+        week: 2,
+        name: "Mini Library Manager",
+        description: "Python-based stateful library management system with persistent JSON storage, reading status tracking, star ratings, smart search by title/author/genre, Open Library API integration for ISBN lookups, and comprehensive logging.",
+        tags: ["Python", "CLI", "API", "OOP"],
+        stack: ["Python", "requests", "JSON"],
+        status: "completed",
+        deployUrl: "#",
+        githubUrl: "https://github.com/Umar-Mukthar-Ahmed/Agentic-Ai-Bootcamp/tree/main/assignments/week-2/library_manager",
     },
     {
         id: 3,
         week: 2,
-        name: "Customer Support Agent",
-        description: "AI-powered chatbot that handles customer queries, routes tickets, and escalates unresolved issues automatically.",
-        tags: ["AI", "Chatbot", "Agents"],
-        stack: ["Python", "FastAPI", "React", "LangChain"],
+        name: "Movie Agent",
+        description: "Movie collection manager with Studio Ghibli and OMDB API integration for fetching movie details. Track watched status, get recommendations by rating, and view collection statistics — available via CLI and Streamlit UI.",
+        tags: ["AI", "Streamlit", "API", "Agents"],
+        stack: ["Python", "Streamlit", "requests", "pandas"],
         status: "live",
-        deployUrl: "https://example.com",
-        githubUrl: "#",
+        deployUrl: "https://agentic-ai-bootcamp-draekscizyenverqhiqo2x.streamlit.app/",
+        githubUrl: "https://github.com/Umar-Mukthar-Ahmed/Agentic-Ai-Bootcamp/tree/main/assignments/week-2/movie-agent",
     },
     {
         id: 4,
         week: 3,
-        name: "Chat Interface Board",
-        description: "A real-time chat board with AI-assisted message suggestions and topic threading built for team collaboration.",
-        tags: ["Chatbot", "Real-time", "UI"],
-        stack: ["React", "WebSockets", "Node.js", "MongoDB"],
-        status: "in-progress",
+        name: "Company Policy Q&A (RAG)",
+        description: "Retrieval-Augmented Generation system using Azure AI Search and Azure OpenAI. Supports user-specific document filtering, strict/conversational/detailed prompt modes, batch Q&A, and a no-hallucination policy.",
+        tags: ["AI", "RAG", "Azure", "NLP"],
+        stack: ["Python", "Azure AI Search", "Azure OpenAI"],
+        status: "completed",
         deployUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/Umar-Mukthar-Ahmed/Agentic-Ai-Bootcamp/tree/main/assignments/week-3/Document_qa_p",
     },
     {
         id: 5,
         week: 3,
-        name: "AI Support Bot",
-        description: "Autonomous support bot trained on internal docs. Answers FAQs, logs unresolved queries, and learns from feedback loops.",
-        tags: ["AI", "Agents", "Automation"],
-        stack: ["Python", "FastAPI", "Pinecone", "GPT-4"],
-        status: "in-progress",
-        deployUrl: "#",
-        githubUrl: "#",
+        name: "Marketing Slogan Generator",
+        description: "Streamlit web app generating marketing slogans via Azure OpenAI and reusable prompt templates. Supports Professional, Creative, and Audience-Focused styles across six tone options with downloadable results.",
+        tags: ["AI", "Prompt Engineering", "Streamlit", "Azure"],
+        stack: ["Python", "Streamlit", "Azure OpenAI"],
+        status: "live",
+        deployUrl: "https://agentic-ai-bootcamp-abwqqwxtwvaj9ek9xdlats.streamlit.app/",
+        githubUrl: "https://github.com/Umar-Mukthar-Ahmed/Agentic-Ai-Bootcamp/tree/main/assignments/week-3/marketing-slogan-generator",
     },
     {
         id: 6,
-        week: 3,
-        name: "Sentiment Analysis API",
-        description: "REST API that analyzes sentiment from text input using transformer models. Returns confidence scores and emotional tone.",
-        tags: ["AI", "NLP", "API"],
-        stack: ["Python", "FastAPI", "HuggingFace", "Docker"],
-        status: "in-progress",
+        week: 4,
+        name: "Customer Support Response Generator",
+        description: "Interactive CLI tool generating context-aware customer support responses via Azure OpenAI. Features three prompt templates: general support, structured issue resolution (billing/technical/delivery), and empathy-first for emotional customers.",
+        tags: ["AI", "Prompt Engineering", "Azure", "CLI"],
+        stack: ["Python", "Azure OpenAI", "python-dotenv"],
+        status: "completed",
         deployUrl: "#",
-        githubUrl: "#",
+        githubUrl: "https://github.com/Umar-Mukthar-Ahmed/Agentic-Ai-Bootcamp/tree/main/assignments/week-4/Customer%20Support%20Response%20Generator",
     },
     {
         id: 7,
-        week: 4,
-        name: "Document Q&A Engine",
-        description: "Upload any document and ask questions about it. Powered by vector embeddings and retrieval-augmented generation.",
-        tags: ["AI", "RAG", "NLP"],
-        stack: ["Python", "LangChain", "Pinecone", "Streamlit"],
-        status: "upcoming",
+        week: 5,
+        name: "Email Automation Agent",
+        description: "AI-powered email automation tool that drafts, categorizes, and sends personalized emails using LLM reasoning. Supports template-based generation, tone adjustment, bulk sending, and auto-reply workflows via SMTP integration.",
+        tags: ["AI", "Automation", "Email", "Agents"],
+        stack: ["Python", "OpenAI", "smtplib", "python-dotenv"],
+        status: "completed",
         deployUrl: "#",
         githubUrl: "#",
     },
     {
-    id: 8,
-    week: 7,
-    name: "Image Analyzer App",
-    description: "AI-powered image analysis tool using Azure Computer Vision. Features OCR text extraction, object detection, image descriptions, probabilistic decision-making, and uncertainty handling with dual CLI and Streamlit web interfaces.",
-    tags: ["AI", "Computer Vision", "OCR", "Azure"],
-    stack: ["Python", "Azure AI", "Streamlit", "Plotly"],
-    status: "live",
-    deployUrl: "https://image-analyzer-app-lu6ftn22jvzn5jpoeqqiha.streamlit.app/",
-    githubUrl: "https://github.com/Umar-Mukthar-Ahmed/image-analyzer-app/",
-}
+        id: 8,
+        week: 5,
+        name: "Speech to Text Transcriber",
+        description: "Real-time speech transcription tool powered by OpenAI Whisper. Records audio from a microphone or accepts uploaded audio files, transcribes with high accuracy across multiple languages, and exports clean transcripts.",
+        tags: ["AI", "Voice", "Whisper", "Transcription"],
+        stack: ["Python", "OpenAI Whisper", "PyAudio", "Streamlit"],
+        status: "completed",
+        deployUrl: "https://github.com/Umar-Mukthar-Ahmed/speech-to-text",
+        githubUrl: "#",
+    },
+    {
+        id: 9,
+        week: 6,
+        name: "AI Web Scraper",
+        description: "AI-powered web scraper that extracts and summarizes content from any URL. Parses page structure with BeautifulSoup, cleans the text, and uses an LLM to generate concise, developer-friendly summaries.",
+        tags: ["AI", "Web Scraping", "NLP"],
+        stack: ["Python", "BeautifulSoup", "LangChain", "Streamlit"],
+        status: "completed",
+        deployUrl: "#",
+        githubUrl: "https://github.com/Umar-Mukthar-Ahmed/ai_web_scraper",
+    },
+    {
+        id: 10,
+        week: 7,
+        name: "Image Analyzer App",
+        description: "AI-powered image analysis tool using Azure Computer Vision. Features OCR text extraction, object detection, image descriptions, probabilistic decision-making, and uncertainty handling — with dual CLI and Streamlit interfaces.",
+        tags: ["AI", "Computer Vision", "OCR", "Azure"],
+        stack: ["Python", "Azure AI", "Streamlit", "Plotly"],
+        status: "live",
+        deployUrl: "https://image-analyzer-app-lu6ftn22jvzn5jpoeqqiha.streamlit.app/",
+        githubUrl: "https://github.com/Umar-Mukthar-Ahmed/image-analyzer-app/",
+    },
 ];
 
 /* ─── STATUS CONFIG ─── */
@@ -204,7 +226,6 @@ function createProjectCard(project, index) {
     </div>
   `;
 
-    // Add click handler to the button
     const button = card.querySelector(".btn-primary");
     button.addEventListener("click", handleOpenProject);
 
@@ -295,10 +316,8 @@ function renderProjects() {
     const emptyState = document.getElementById("empty-state");
     const resultsCount = document.getElementById("results-count");
 
-    // Update results count
     resultsCount.textContent = `${filtered.length} project${filtered.length !== 1 ? "s" : ""} found`;
 
-    // Clear container
     weeksContainer.innerHTML = "";
 
     if (weeks.length > 0) {
@@ -313,18 +332,13 @@ function renderProjects() {
 
 /* ─── INITIALIZE APP ─── */
 function init() {
-    // Add mounted class for animations
     setTimeout(() => {
         document.getElementById("app").classList.add("mounted");
     }, 80);
 
-    // Update stats
     updateStats();
-
-    // Initial render
     renderProjects();
 
-    // Search input handler
     const searchInput = document.getElementById("search-input");
     searchInput.addEventListener("input", (e) => {
         currentQuery = e.target.value;
